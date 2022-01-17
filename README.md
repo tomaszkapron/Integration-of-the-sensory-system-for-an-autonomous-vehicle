@@ -29,6 +29,10 @@ Map obtained using the system:
 * How/where to download your program
 * Any modifications needed to be made to files/folders
 
+### Calibration
+
+* describe how to 
+
 ### Executing program
 
 * How to run the program
