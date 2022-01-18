@@ -14,7 +14,7 @@ Project is based on ROS noetic (Robot Operating System) and Ubuntu 20.04 platfor
 
 Map obtained using the system:
 <p align="center">
-  <img src="mapa.JPG" width="650" img align="center">
+  <img src="map.JPG" width="650" img align="center">
 </p>
 
 ## Getting Started
