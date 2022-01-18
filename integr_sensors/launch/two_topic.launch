@@ -1,0 +1,5 @@
+<launch>
+	<node name="topic_throttler" type="throttle" pkg="topic_tools" args="messages /d435/depth/color/points 10.0 /d435/depth/color/points/th" />
+	<node pkg="topic_tools" type="relay" name="relay1" args="/os_cloud_node/points /our_pointcloud" />
+	<node pkg="topic_tools" type="relay" name="relay2" args="/d435/depth/color/points/th /our_pointcloud" />
+</launch>
