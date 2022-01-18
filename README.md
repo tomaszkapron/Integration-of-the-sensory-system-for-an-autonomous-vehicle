@@ -33,6 +33,8 @@ Map obtained using the system:
 
 * describe how to 
 
+### Modify otomap_mapping launch file
+
 ### Executing program
 
 * How to run the program
@@ -50,8 +52,8 @@ command to run if program contains helper info
 
 ## Authors
 
-Joanna Walowska 
-[@tomaszkapron](https://github.com/tomaszkapron)
+* Joanna Walowska 
+* [@tomaszkapron](https://github.com/tomaszkapron)
 
 ## License
 
