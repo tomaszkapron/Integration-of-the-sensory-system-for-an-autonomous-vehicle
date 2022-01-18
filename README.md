@@ -20,50 +20,49 @@ Map obtained using the system:
 ## Getting Started
 
 ### Dependencies
-
-* , needed before installing program.
+* [realsense-ros](https://github.com/IntelRealSense/realsense-ros), [librerealsense](https://github.com/IntelRealSense/librealsense), [octomap_mapping](https://github.com/OctoMap/octomap_mapping), [ouster_example](https://github.com/ouster-lidar/ouster_example), needed before installing program.
 * Ubuntu 20.04 with ROS noetic installed
 
 ### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+#### With catkin
+```
+cd catkin_ws/src
+git clone https://github.com/tomaszkapron/Integration-of-the-sensory-system-for-an-autonomous-vehicle
+cd ..
+catkin_make
+```
 
 ### Calibration
+You need to provide translation beetween sensors according to T265 camera. Transation should be given in txt files, that can be found in scripts folder. Name of the files are t265_d435.txt and t265_lidar.txt accordingly to transformation to IntelRealsense D435 and Ouster Lidar sensor. Format of the text file is x, y, x, roll, pitch, azimut. Each parameter should be given in the new line. Parameters x, y, z are given in meters. Parameteres roll, pitch, azimut are given in degrees.
+Those translation parameters can be obtained directly from CAD model or by using software such as ros kalibr node. Calibration for Lidar could be obtain i.e with [lidar_camera_calibration](https://github.com/heethesh/lidar_camera_calibration). The exact locations of the coordinate systems, inside the housings of the devices can be found in the documentation of the devices.
 
-* describe how to 
-
-### Modify otomap_mapping launch file
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+Navigate to scripts folder.
 ```
-code blocks for commands
+cd ~/catkin_ws/src/integr_sensors/scripts
+```
+Then simply run bash script runAllBash.sh
+```
+./runAllBash.sh
+```
+After 20s, all the sensors should be inicialized. All the topics should be available.
+
+### Running octomap_mapping
+To start building map via octomap_mapping navigate to catkin_ws folder and run roslaunch command.
+```
+roslaunch octomap_server octomap_mapping.launch
 ```
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+### Rviz
+Map can be visualized in rviz. Fixed frame should be set to map.
 
 ## Authors
-
-* Joanna Walowska 
-* [@tomaszkapron](https://github.com/tomaszkapron)
+* [Joanna Walowska](https://github.com/panchasan)
+* [Tomasz Kaproń](https://github.com/tomaszkapron)
 
 ## License
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
