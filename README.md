@@ -54,7 +54,11 @@ Then simply run bash script runAllBash.sh
 After 20s, all the sensors should be inicialized. All the topics should be available.
 
 ### Running octomap_mapping
-
+For octomap_mapping to work propperly it is required to provide few parameters in launch file:
+* resolution should be set to 0.35 (feel free to play with this parameter)
+* frame_id should be set map
+* max_range should be set to 30.0
+* cloud_in should be set to /our_pointcloud
 To start building map via octomap_mapping navigate to catkin_ws folder and run roslaunch command.
 ```
 roslaunch octomap_server octomap_mapping.launch
