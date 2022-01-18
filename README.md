@@ -20,7 +20,11 @@ Map obtained using the system:
 ## Getting Started
 
 ### Dependencies
-* [realsense-ros](https://github.com/IntelRealSense/realsense-ros), [librerealsense](https://github.com/IntelRealSense/librealsense), [octomap_mapping](https://github.com/OctoMap/octomap_mapping), [ouster_example](https://github.com/ouster-lidar/ouster_example), needed before installing program.
+* [realsense-ros](https://github.com/IntelRealSense/realsense-ros),
+* [librerealsense](https://github.com/IntelRealSense/librealsense), 
+* [octomap_mapping](https://github.com/OctoMap/octomap_mapping), 
+* [ouster_example](https://github.com/ouster-lidar/ouster_example),
+* [octomap](https://github.com/OctoMap/octomap),
 * Ubuntu 20.04 with ROS noetic installed
 
 ### Installing
